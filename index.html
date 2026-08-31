@@ -183,7 +183,7 @@
     position:sticky;top:0;z-index:60;height:64px;flex-shrink:0;
     display:flex;align-items:center;gap:14px;padding:0 16px;
     background-image: linear-gradient(rgba(5,10,20,0.72), rgba(5,10,20,0.82)), url('header-bg.jpg');
-    background-size:cover; background-position:center 38%;
+    background-size:cover; background-position:center 38%; background-attachment:fixed;
     border-bottom:1px solid var(--line);
     box-shadow:0 6px 24px rgba(0,0,0,0.35);
   }
@@ -226,7 +226,11 @@
 
   .main-content{flex:1;min-width:0;}
 
-  .page-header{padding:24px 20px 16px;border-bottom:1px solid var(--line);}
+  .page-header{
+    padding:24px 20px 20px;border-bottom:1px solid var(--line);
+    background-image: linear-gradient(rgba(5,10,20,0.72), rgba(5,10,20,0.82)), url('header-bg.jpg');
+    background-size:cover; background-position:center 38%; background-attachment:fixed;
+  }
   .page-header h1{font-family:'Barlow Condensed',sans-serif;font-size:24px;text-transform:uppercase;margin:0 0 4px;}
   .page-header p{color:var(--ink-dim);font-size:13px;margin:0;}
   .page-body{padding:18px 20px 40px;max-width:900px;}
@@ -1468,7 +1472,7 @@ if(hamburgerBtn) hamburgerBtn.addEventListener('click', toggleNavDrawer);
 const navDrawerOverlay = document.getElementById('navDrawerOverlay');
 if(navDrawerOverlay) navDrawerOverlay.addEventListener('click', closeNavDrawer);
 const navDrawerVersion = document.getElementById('navDrawerVersion');
-if(navDrawerVersion) navDrawerVersion.textContent = 'v2.3.0';
+if(navDrawerVersion) navDrawerVersion.textContent = 'v2.4.0';
 
 document.querySelectorAll('.nav-item').forEach(el => {
   el.addEventListener('click', () => { showPage(el.getAttribute('data-page')); closeNavDrawer(); });
