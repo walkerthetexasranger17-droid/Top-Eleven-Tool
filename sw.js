@@ -1,11 +1,12 @@
 // Bump this string every time you ship a new version of the app.
 // Bumping it forces the old cache to be thrown away and the new files fetched.
-const CACHE_VERSION = 'te-app-v5';
+const CACHE_VERSION = 'te-app-v6';
 const CORE_ASSETS = [
   './index.html',
   './manifest.json',
   './icon-192.png',
-  './icon-512.png'
+  './icon-512.png',
+  './header-bg.jpg'
 ];
 
 self.addEventListener('install', (event) => {
