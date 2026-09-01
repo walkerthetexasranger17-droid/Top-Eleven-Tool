@@ -184,7 +184,6 @@
     display:flex;align-items:center;gap:14px;padding:0 16px;
     background-image: linear-gradient(rgba(5,10,20,0.72), rgba(5,10,20,0.82)), url('header-bg.jpg');
     background-size:100vw auto; background-position:center top; background-attachment:fixed; background-repeat:no-repeat; background-color:var(--bg);
-    border-bottom:1px solid var(--line);
     box-shadow:0 6px 24px rgba(0,0,0,0.35);
   }
   .hamburger-btn{
@@ -227,7 +226,7 @@
   .main-content{flex:1;min-width:0;}
 
   .page-header{
-    padding:24px 20px 20px;border-bottom:1px solid var(--line);
+    padding:24px 20px 20px;
     background-image: linear-gradient(rgba(5,10,20,0.72), rgba(5,10,20,0.82)), url('header-bg.jpg');
     background-size:100vw auto; background-position:center top; background-attachment:fixed; background-repeat:no-repeat; background-color:var(--bg);
   }
@@ -1472,7 +1471,7 @@ if(hamburgerBtn) hamburgerBtn.addEventListener('click', toggleNavDrawer);
 const navDrawerOverlay = document.getElementById('navDrawerOverlay');
 if(navDrawerOverlay) navDrawerOverlay.addEventListener('click', closeNavDrawer);
 const navDrawerVersion = document.getElementById('navDrawerVersion');
-if(navDrawerVersion) navDrawerVersion.textContent = 'v2.6.0';
+if(navDrawerVersion) navDrawerVersion.textContent = 'v2.6.1';
 
 document.querySelectorAll('.nav-item').forEach(el => {
   el.addEventListener('click', () => { showPage(el.getAttribute('data-page')); closeNavDrawer(); });
